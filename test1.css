@@ -91,14 +91,21 @@ section {
     
 }
  
- .sit-header {
+ .site-header {
    width: 100%;
-   color: #222;
-   font-size: 13px;
    position: absolute;
  }
 
+.header-width {
+    max-width: 100%;
+    margin: 0 36px 0 36px;
+    position: relative;
+}
 
+.contents-tidy {
+    display: flex;
+    justify-content: space-between;
+}
 
 .site-header .site-header-inner>*:last-child {
   display: inline-flex;
@@ -116,11 +123,6 @@ section {
   margin: 0px 36px;
 }
 
-.header-width {
-  max-width: 100%;
-  margin: 0 36px 0 36px;
-  position: relative
-}
 
 .header-logo>.header-logo-pc {
   width: auto;
@@ -139,7 +141,10 @@ section {
   display: none;
 }
 
-
+.contents-tidy{
+  display: flex;
+  justify-content: space-between;
+}
 
 @media screen and (max-width: 1080px) {
 .header-nav-hamburger {
@@ -181,15 +186,10 @@ section {
 }
 }
 
-.contents-tidy {
-  display: flex;
-  justify-content: space-between;
-}
-
-
 .header-nav .header-nav-list.contents-tidy {
     align-items: center;
 }
+
 
 .header-nav .header-nav-item-outline {
   margin-right: 45px;
@@ -203,16 +203,13 @@ section {
   font-family: 'Lato', sans-serif;
 }
 
+
 .header-nav .header-nav-item>span {
   display: block;
   font-weight: bold;
   text-align: center;
 }
 
-.content-tidy {
-  display: flex;
-  justify-content: space-between;
-}
 
 .header-nav .header-nav-item>span {
     display: block;
@@ -220,27 +217,28 @@ section {
     text-align: center;
 }
 
-
 .link-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #fff;
-  cursor: pointer;
-  background-color: #f79314;
-  border-radius: 30px;
-  text-decoration: none;
-  text-align: center;
-  font-weight: bold;
-  width: 100%;
-  font-size: 20px;
-  border:none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    background-color: #f79314;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    border: none;
 }
 
 .link-button.menu {
-  padding: 0 20px;
-  height: 40px;
-  font-size: 12px;
+    font-size: 12px;
+    height: 40px;
+    padding: 0 20px;
 }
 /*-----------firstview--------*/
 
@@ -252,40 +250,41 @@ section {
    padding-bottom: 28px;
 }
    
-.first-image {
+.first-mainimage img{
   width: 100%;
-  display: none;
+ 
 }
 
-.firstviewcontainer {
-  max-width: 1140px;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
+ .firstview-mainimage-sp {
+    display: none;
 }
-
+.firstView_container {
+    max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
 .firstviewcontent {
   margin-bottom: 70px;
   width: fit-content;
 }
 
-.firsviewcontent_title {
-  color: #333333;
-  font-family:  'Lato', sans-serif;
-  font-size: 38px;
-  line-height: 54px;
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 15px;
+.firstviewcontent_title {
+    color: #333333;
+    font-family: 'Lato', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 54px;
+    margin-bottom: 15px;
+    text-align: center;
 }
-
 .firstviewcontent_images {
  margin-bottom: 25px;
 }
 
-.firstviewcontent_images {
+.firstviewcontent_images img {
   margin-right: 8px;
 }
 
@@ -345,8 +344,13 @@ section {
    
    
 /*section top-about*/
+
+.main-section {
+    padding: 100px 0;
+}
+
 .main-section.top-about {
-  padding: 45px 0;
+  padding: 30px 20px;
   background-color: #f79314;
 }
 
@@ -373,10 +377,12 @@ section {
   letter-spacing: 1px;
 }
 
+
+
 .about-text h2>span {
-  font-size: 50px;
-  font-weight: 900;
-  font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
 }
 
 .about-text p {
@@ -518,10 +524,17 @@ section {
 
 
 @media screen and (max-width: 767px) {
-html {
-  font-size: 15px;
+  html {
+    font-size: 15px;
+  }
 }
+
+@media screen and (max-width: 767px) {
+  main {
+    padding-top: 52px;
+  }
 }
+
 
 @media screen and (max-width: 767px) {
 .site-header {
@@ -582,7 +595,6 @@ html {
 
 @media screen and (max-width: 767px) {
   .firstview_container {
-    margin-top: -45vw;
     max-width: none;
     padding-left: 20px;
     padding-right: 20px;
@@ -590,7 +602,14 @@ html {
 }
 
 @media screen and (max-width: 767px) {
-  .firstviewcontent {
+  .firstview_container {
+  margin-top: -45vw; 
+    
+  }
+}
+
+@media screen and (max-width: 767px)  {
+  .firstViewcontent { 
     margin-bottom: 20px;
     width: 100%;
   }
@@ -697,5 +716,17 @@ html {
 @media screen and (max-width: 767px) {
   .link-button span:last-child {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-section-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about-text {
+    width: 100%;
   }
 }
